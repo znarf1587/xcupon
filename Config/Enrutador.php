@@ -23,6 +23,16 @@
           call_user_func_array(array($controlador, $metodo), $agumento);
         }
       }
+
+      //cargar vista
+
+      $ruta = ROOT . "Views" . DS . $request->getControlador() . DS . $request->getMetodo() . ".php";
+      if(is_readable($ruta)){
+        require_once $ruta;
+      }else{
+        print "no se encontro la ruta";
+      }
+
     }
   }
 
