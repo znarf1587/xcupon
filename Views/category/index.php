@@ -1,1 +1,1 @@
-<h3>Vista del estudiante principal</h3>
+<h1>Vista de  categorias</h1>

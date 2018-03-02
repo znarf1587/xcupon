@@ -38,7 +38,7 @@
       return $this->metodo;
     }
     public function getArgumento(){
-      return $this->argumentoo;
+      return $this->argumento;
     }
   }
 ?>

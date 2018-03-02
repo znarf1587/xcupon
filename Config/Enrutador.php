@@ -6,6 +6,7 @@
     public static function run(Request $request){
       $controlador = $request->getControlador() . "Controller";
       $ruta = ROOT . "Controllers" . DS . $controlador . ".php";
+      
       $metodo = $request->getMetodo();
 
       if($metodo == "index.php"){
@@ -20,7 +21,7 @@
         if(!isset($argumento)){
           call_user_func(array($controlador, $metodo));
         }else{
-          call_user_func_array(array($controlador, $metodo), $agumento);
+          call_user_func_array(array($controlador, $metodo), $argumento);
         }
       }
 
