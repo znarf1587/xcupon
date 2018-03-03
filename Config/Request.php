@@ -26,7 +26,7 @@
         }
         $this->argumento = $ruta;
       }else{
-        $this->controlador = "catagory";
+        $this->controlador = "category";
         $this->metodo = "index";
       }
     }
