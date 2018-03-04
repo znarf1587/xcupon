@@ -1,0 +1,9 @@
+footer{
+  background: #e9ecef;
+  text-align: center;
+}
+.catalog-card{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}

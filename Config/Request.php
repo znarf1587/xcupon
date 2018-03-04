@@ -14,7 +14,7 @@
         $ruta = array_filter($ruta);
         
         if($ruta[0] == "index.php"){
-          $this->controlador = "category";
+          $this->controlador = "store";
         }else{
           $this->controlador = strtolower(array_shift($ruta));
         }
@@ -26,7 +26,7 @@
         }
         $this->argumento = $ruta;
       }else{
-        $this->controlador = "category";
+        $this->controlador = "store";
         $this->metodo = "index";
       }
     }
