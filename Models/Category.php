@@ -20,7 +20,7 @@
     }
 
     public function list(){
-      $sql = "SELECT * FROM product_category";
+      $sql = "SELECT * FROM product_category ORDER BY parent_category_id";
       $datos = $this->con->consultaRetorno($sql);
       return $datos;
     }
@@ -46,6 +46,49 @@
       $datos = $this->con->consultaRetorno($sql);
       $row = mysqli_fetch_assoc($datos);
       return $row;
+    }
+
+    public function arbol($array){
+      $cant = count($array);
+      $html = "<ul>";
+      
+      for($i=0;$i<$cant;$i++)
+      {
+        if($array[$i][0]==$array[$i][3])
+        {
+          $html.="<li>".$array[$i][1]."</li>";
+          $html.="<ul>";
+          for($j=$i+1;$j<$cant;$j++)
+          {
+            if($array[$j][3]==$array[$i][0])
+            {
+              $html.="<li>".$array[$j][1]."</li>";
+              $html.="<ul>";
+              for($k=$j+1;$k<$cant;$k++)
+              {
+                if($array[$k][3]==$array[$j][0])
+                {
+                  $html.="<li>".$array[$k][1]."</li>";
+                  $html.="<ul>";
+                  for($l=$k+1;$l<$cant;$l++)
+                  {
+                    if($array[$l][3]==$array[$k][0])
+                    {
+                      $html.="<li>".$array[$l][1]."</li>";
+                    }
+                  }
+                  $html.="</ul>";
+                }
+              }
+              $html.="</ul>";
+            }
+          }
+          $html.="</ul>";
+        }
+      }
+
+      $html.="</ul>";
+      echo $html;
     }
   }
 ?>
