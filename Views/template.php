@@ -28,16 +28,16 @@
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo URL;?>">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="category">Category</a>
+        <a class="nav-link" href="<?php echo URL;?>category">Category</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="product">Product</a>
+        <a class="nav-link" href="<?php echo URL;?>product">Product</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="cart">Cart</a>
+        <a class="nav-link" href="<?php echo URL;?>cart">Cart</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

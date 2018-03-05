@@ -1,16 +1,14 @@
 <?php
 
-  use Models\Product as Product;
+  
   use Models\Category as Category;
-
-  $prod = new Product();
+  
   $cat = new Category();
-  $result = $prod->list();
   $filter1 =$cat->list(); 
   
  
 ?>
-
+<div class="box-principal">
 <h2>Lista de Productos en la tienda</h2>
 
 <table class="table table-hover">
@@ -26,7 +24,7 @@
   </thead>
   <tbody>
 <?php
-  while($row=mysqli_fetch_array($result))
+  while($row=mysqli_fetch_array($datos))
   {
 ?>
     <tr>
@@ -104,3 +102,6 @@
     </div>
   </div>
 </div>
+
+</div>
+<!-- final -->

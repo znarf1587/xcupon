@@ -1,10 +1,19 @@
 <?php
   namespace Controllers;
 
+  use Models\Product as Product;
+
   class productController{
 
+    private $product;
+
+    public function __construct(){
+      $this->product = new Product();
+    } 
+
     public function index(){
-      echo "index del controlador product";
+      $datos = $this->product->list();
+      return $datos;
     }
 
     public function guardar()

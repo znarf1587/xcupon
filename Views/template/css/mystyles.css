@@ -1,9 +1,24 @@
+.item{
+  height: 200px;
+  width: 150px;
+}
+img{
+  height: 100%; 
+  width: 100%; 
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
 footer{
   background: #e9ecef;
   text-align: center;
 }
 .catalog-card{
   display: flex;
+  flex-wrap: wrap;
   justify-content:space-around;
   align-items: center;
+}
+.catalog-card{
+  margin-top: 1rem;
 }
