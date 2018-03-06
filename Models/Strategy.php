@@ -1,14 +1,14 @@
 <?php
-namespace Behavioral\Strategy\Example\ShoppingCart;
+namespace Models;
  
 interface PaymentInterface
 {
     public function pay($amount);
 }
 
-namespace Behavioral\Strategy\Example\ShoppingCart;
+namespace Models;
  
-use Behavioral\Strategy\Example\ShoppingCart\PaymentInterface;
+use Models\PaymentInterface;
  
 class CreditCardPayment implements PaymentInterface
 {
@@ -36,9 +36,9 @@ class CreditCardPayment implements PaymentInterface
 
 
 
-namespace Behavioral\Strategy\Example\ShoppingCart;
+namespace Models;
  
-use Behavioral\Strategy\Example\ShoppingCart\PaymentInterface;
+use Models\PaymentInterface;
  
 class PaypalPayment implements PaymentInterface
 {
@@ -62,10 +62,10 @@ class PaypalPayment implements PaymentInterface
 
 
 
-namespace Behavioral\Strategy\Example\ShoppingCart;
+namespace Models;
 
-use Behavioral\Strategy\Example\ShoppingCart\Item;
-use Behavioral\Strategy\Example\ShoppingCart\PaymentInterface;
+use Models\Item;
+use Models\PaymentInterface;
 
 class ShoppingCart
 {
@@ -107,10 +107,10 @@ class ShoppingCart
 }
 
 
-namespace Behavioral\Strategy\Example\ShoppingCart;
+namespace Models;
  
-use Behavioral\Strategy\Example\ShoppingCart\Item;
-use Behavioral\Strategy\Example\ShoppingCart\PaymentInterface;
+use Models\Item;
+use Models\PaymentInterface;
  
 class ShoppingCart
 {
@@ -152,7 +152,7 @@ class ShoppingCart
 }
 
 
-namespace Behavioral\Strategy\Example\ShoppingCart;
+namespace Models;
  
 class Item
 {
@@ -185,10 +185,10 @@ class Item
  
 }
 
-use Behavioral\Strategy\Example\ShoppingCart\Item;
-use Behavioral\Strategy\Example\ShoppingCart\ShoppingCart;
-use Behavioral\Strategy\Example\ShoppingCart\CreditCardPayment;
-use Behavioral\Strategy\Example\ShoppingCart\PaypalPayment;
+use Models\Item;
+use Models\ShoppingCart;
+use Models\CreditCardPayment;
+use Models\PaypalPayment;
  
 $cart = new ShoppingCart();
  
