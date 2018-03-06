@@ -1,7 +1,7 @@
 <?php
   namespace Models;
 
-  class Product{
+  class Product extends Template{
     private $id;
 	  private $product_name;
 	  private $product_description;
@@ -14,13 +14,6 @@
       $this->con = new Conexion();
     }
 
-    public function set($atribute,$value){
-      $this->$atribute = $value;
-    }
-    public function get($atribute){
-      return $this->$atribute;
-    }
-
     public function list(){
       $sql = "SELECT * FROM product";
       $datos = $this->con->consultaRetorno($sql);
@@ -28,26 +21,19 @@
     }
 
     public function add($type, $value){
-      $sql = "INSERT INTO empresa(nit, nombre, logo, id_color)
-              VALUES ('{$this->nit}','{$this->nombre}','{$this->logo}','{$this->color}')";
-      $this->con->consultaSimple($sql);
+     
     }
 
     public function edit(){
-      $sql = "UPDATE empresa set nit = '{$this->nit}', nombre = '{$this->noombre}', logo = '{$this->logo}', id_color = '{$this->color}'";
-      $this->con->consultaSimple($sql);
+      
     }
 
     public function delete(){
-      $sql = "DELETE FROM empresa WHERE nit = '{$this->nit}'";
-      $this->con->consultaSimple($sql);
+      
     }
 
     public function view(){
-      $sql = "SELECT * FROM empresa WHERE nit = '{$this->nit}'";
-      $datos = $this->con->consultaRetorno($sql);
-      $row = mysqli_fetch_assoc($datos);
-      return $row;
+      
     }
   }
 ?>

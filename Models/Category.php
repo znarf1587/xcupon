@@ -1,7 +1,7 @@
 <?php
   namespace Models;
 
-  class Category{
+  class Category extends Template{
     private $id;
 	  private $category_name;
     private $max_reward_points_encash;
@@ -26,26 +26,19 @@
     }
 
     public function add($type, $value){
-      $sql = "INSERT INTO empresa(nit, nombre, logo, id_color)
-              VALUES ('{$this->nit}','{$this->nombre}','{$this->logo}','{$this->color}')";
-      $this->con->consultaSimple($sql);
+     
     }
 
     public function edit(){
-      $sql = "UPDATE empresa set nit = '{$this->nit}', nombre = '{$this->noombre}', logo = '{$this->logo}', id_color = '{$this->color}'";
-      $this->con->consultaSimple($sql);
+      
     }
 
     public function delete(){
-      $sql = "DELETE FROM empresa WHERE nit = '{$this->nit}'";
-      $this->con->consultaSimple($sql);
+      
     }
 
     public function view(){
-      $sql = "SELECT * FROM empresa WHERE nit = '{$this->nit}'";
-      $datos = $this->con->consultaRetorno($sql);
-      $row = mysqli_fetch_assoc($datos);
-      return $row;
+     
     }
 
     public function arbol($array){

@@ -1,7 +1,7 @@
 <?php
   namespace Models;
 
-  class Store{
+  class Store extends Template{
 
     private $id;
 
