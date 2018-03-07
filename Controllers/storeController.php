@@ -18,7 +18,7 @@
     public function seccion($id)
     {
       $this->tienda->set("id",$id);
-      $datos = $this->tienda->list();
+      $datos = $this->tienda->lista();
       if (mysqli_num_rows($datos)>0)
         return $datos;
       else

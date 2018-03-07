@@ -4,7 +4,7 @@
   use Models\Category as Category;
 
   $cat = new Category();
-  $result = $cat->list();
+  $result = $cat->lista();
 
   $catalogo = array(
             'items' => array(),

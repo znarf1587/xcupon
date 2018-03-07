@@ -4,7 +4,7 @@
   use Models\Category as Category;
   
   $cat = new Category();
-  $filter1 =$cat->list(); 
+  $filter1 =$cat->lista(); 
   
  
 ?>

@@ -12,7 +12,7 @@
     } 
 
     public function index(){
-      $datos = $this->product->list();
+      $datos = $this->product->lista();
       return $datos;
     }
 
