@@ -14,7 +14,7 @@
       $this->con = new Conexion();
     }
 
-    public function list(){
+    public function lista(){
       $sql = "SELECT * FROM product";
       $datos = $this->con->consultaRetorno($sql);
       return $datos;

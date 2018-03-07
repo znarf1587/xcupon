@@ -12,7 +12,7 @@
       
     }
 
-    public function list(){
+    public function lista(){
       
     }
 

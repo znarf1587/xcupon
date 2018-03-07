@@ -19,7 +19,7 @@
       return $this->$atribute;
     }
 
-    public function list(){
+    public function lista(){
       $sql = "SELECT * FROM product_category ORDER BY parent_category_id";
       $datos = $this->con->consultaRetorno($sql);
       return $datos;

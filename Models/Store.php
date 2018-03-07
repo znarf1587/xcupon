@@ -22,8 +22,7 @@
       return $datos;
     }
 
-    public function list()
-    {
+    public function lista(){
       $sql = "SELECT * FROM product_category WHERE id <>'{$this->id}' AND parent_category_id='{$this->id}'";
       $datos = $this->con->consultaRetorno($sql);
       return $datos;

@@ -8,8 +8,8 @@
   // $tore = new Store();
 
 
-  $result = $prod->list();
-  $filter1 = $cat->list(); 
+  $result = $prod->lista();
+  $filter1 = $cat->lista(); 
   // $indice = $tore->listRaiz();
 
   
